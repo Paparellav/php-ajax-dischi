@@ -7,19 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify</title>
   <!-- Style -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
   <header class="header">
     <div class="logo">
-      <img src="img/logo-spotify.png" alt="logo-spotify">
+      <img src="../img/logo-spotify.png" alt="logo-spotify">
     </div>
   </header>
 
   <main>
     <div class="container">
-      <?php include "database.php"; ?>
+      <?php include __DIR__ . "/../database.php"; ?>
       <?php foreach ($database as $item) { ?>
         <div class="card">
           <div class="card_image">
