@@ -41,7 +41,7 @@ main {
 }
 
 .card_image img {
-  width: 150px;
+  width: 90%;
 }
 
 .card h4 {
@@ -58,4 +58,13 @@ main {
 
 .card small {
   color: #6d7475;
+}
+
+.input_section {
+  text-align: center;
+}
+
+select {
+  width: 200px;
+  margin: 3rem auto;
 }
