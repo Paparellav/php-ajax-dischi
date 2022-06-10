@@ -16,6 +16,28 @@
       <img src="img/logo-spotify.png" alt="logo-spotify">
     </div>
   </header>
+
+  <main>
+    <div class="container">
+      <?php include "database.php"; ?>
+      <?php foreach ($database as $item) { ?>
+        <div class="card">
+          <div class="card_image">
+            <?php echo '<img src="' . $item["poster"] . '" alt="error">'; ?>
+          </div>
+          <h4>
+            <?php echo $item["title"]; ?>
+          </h4>
+          <h5>
+            <?php echo $item["author"]; ?>
+          </h5>
+          <small>
+            <?php echo $item["year"]; ?>
+          </small>
+        </div>
+      <?php } ?>
+    </div>
+  </main>
 </body>
 
 </html>
