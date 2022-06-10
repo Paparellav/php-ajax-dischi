@@ -24,7 +24,6 @@
   <main id="app">
     <div class="input_section">
       <select name="genre" id="genre" v-model="genre" @change="getGenre">
-        <option value="all">Qualsiasi</option>
         <option value="Rock">Rock</option>
         <option value="Pop">Pop</option>
         <option value="Jazz">Jazz</option>

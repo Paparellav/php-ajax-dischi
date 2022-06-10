@@ -2,25 +2,20 @@ const app = new Vue({
   el: "#app",
   data: {
     albums: [],
-    userWord: "",
+    genre: "",
   },
   methods: {
     getGenre() {
       axios
         .get(
-          `http://localhost/php-ajax-dischi/milestone2/server.php?genre=${this.userWord}`
+          `http://localhost/php-ajax-dischi/milestone2/server.php?genre=${this.genre}`
         )
         .then((resp) => {
-          console.log(resp.data);
-          console.log(this.userWord);
+          this.albums = resp.data;
         });
     },
   },
   mounted() {
-    axios
-      .get("http://localhost/php-ajax-dischi/milestone2/server.php")
-      .then((resp) => {
-        this.albums = resp.data;
-      });
-  },
+    this.getGenre();
+  }
 });
